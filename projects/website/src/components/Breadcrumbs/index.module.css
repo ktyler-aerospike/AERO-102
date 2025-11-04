@@ -1,0 +1,22 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray-700);
+}
+.item {
+    font-size: 12px;
+    display: block;
+    line-height: 1;
+    text-transform: capitalize;
+}
+a.item {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+a.item:hover {
+    color: var(--gray-900);
+}
+.chevron {
+    transform: scale(.7);
+}

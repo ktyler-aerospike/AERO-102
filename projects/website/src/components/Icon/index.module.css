@@ -1,0 +1,20 @@
+.xs {
+    height: 12px;
+    width: 12px;
+}
+.sm {
+    height: 16px;
+    width: 16px;
+}
+.md {
+    height: 24px;
+    width: 24px;
+}
+.lg {
+    height: 32px;
+    width: 32px;
+}
+.xl {
+    height: 64px;
+    width: 64px;
+}

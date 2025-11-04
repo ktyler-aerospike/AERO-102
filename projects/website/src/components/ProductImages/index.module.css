@@ -1,0 +1,15 @@
+.images {
+    height: 400px;
+    display: flex;
+    gap: 2rem;
+}
+.selected-img {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.selected-img img {
+    height: 100%;
+    width: auto;
+    display: block;
+}

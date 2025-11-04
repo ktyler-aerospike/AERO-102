@@ -1,0 +1,6 @@
+# Aerospike dependencies
+aerospike
+# Web Server 
+fastapi
+uvicorn[standard]
+python-multipart

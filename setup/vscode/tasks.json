@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "open Panel",
+            "command": "${command:workbench.action.togglePanel}",
+            "type": "shell",
+            "problemMatcher": [],
+            "runOptions": { "runOn": "folderOpen" }
+        }
+    ]
+}

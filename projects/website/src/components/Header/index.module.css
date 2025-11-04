@@ -1,0 +1,39 @@
+.header {
+    background-color: var(--orange-100);
+    position: sticky;
+    top: 0;
+    padding: 0 16px;
+    gap: 20px;
+    z-index: 100;
+}
+.nav,
+.nav form {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 50px;
+}
+.nav {
+    height: 90px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--gray-200);
+}

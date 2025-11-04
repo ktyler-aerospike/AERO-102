@@ -1,0 +1,87 @@
+.button {    
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+    text-decoration: none !important;
+}
+
+button:disabled {
+    color: var(--gray-500);
+}
+.primary,
+.secondary {
+    display: inline-flex;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 300px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.primary {
+    border-color: var(--orange-400);
+    background: var(--orange-400);
+}
+.primary:hover {
+    border-color: var(--orange-500);
+    background: var(--orange-500);
+}
+.primary:focus {
+    border-color: var(--gray-900);
+}
+.primary:active {
+    border-color: var(--orange-600);
+    background: var(--orange-600);
+}
+.primary:disabled {
+    border-color: var(--gray-200);
+    background: var(--gray-200);
+}
+
+/* Secondary */
+
+.secondary {
+    color: var(--black);
+    border-color: var(--blue-100);
+    background: var(--blue-100);
+}
+.secondary:hover {
+    border-color: var(--blue-200);
+    background: var(--blue-200);
+}
+.secondary:focus {
+    border-color: var(--orange-400);
+}
+.secondary:active {
+    border-color: var(--blue-400);
+    background: var(--blue-400);
+}
+.secondary:disabled {
+    border-color: var(--gray-500);
+}
+
+/* Tertiary */
+
+.tertiary {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    line-height: 120%; /* 19.2px */
+    color: var(--black);
+}
+.tertiary:hover {
+    gap: 4px;
+    color: var(--gray-700);
+}
+.tertiary:focus {
+    border-bottom: 1px solid var(--blue-300);
+}
+.tertiary:active {
+    color: var(--gray-900);
+}

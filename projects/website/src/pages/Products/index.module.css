@@ -1,0 +1,13 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.products > h2 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.products > h2 > span {
+    text-transform: capitalize;
+}

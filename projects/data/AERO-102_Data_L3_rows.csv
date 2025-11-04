@@ -1,0 +1,11 @@
+item_id,decade,category,subcategory,color,material,condition,pattern,related,description,size,price,url
+1033,1990,top,sweatjacket,sapphire blue,cotton spandex velour,excellent,solid,"1034, 1059","fitted loungewear in the ""Juicy"" style, rhinstone heart accent on chest, zip front, split kangaroo pocket",P,8.59,https://i.imgur.com/sJeXWTi.png
+1034,1990,pants,sweatpants,saphire blue,cotton spandex velour,excellent,solid,"1033, 1059","fitted loungewear in the ""Juicy"" style, rhinstone heart accent on leg, drawstring yoked waist",P,25.82,https://i.imgur.com/ajiR2L5.png
+1035,1980,accessories,gloves,purple,polyester spandex,good,solid,,"mesh, fingerless gloves for the ""Madonna"" look",OS,67.87,https://i.imgur.com/2y1XK8U.png
+1036,1960,dress,mini dress,"electric pink, baby pink, tangerine, mint green",polyester  ,excellent,swirl,"1026, 1039","Pucci-style printed, fitted, mini dress with bell sleeves and scoop neck",8,67.41,https://i.imgur.com/oMlFXQG.png
+1037,1940,tops,suit jacket,dark blue,wool,good,pin stripe,1038,"Double-breasted suit jacket, notched lapel, shirt and tie are NOT INCLUDED",L,33.70,https://i.imgur.com/pam3U5J.png
+1038,1940,pants,suit pants,dark blue,wool,good,pin stripe,1037,front pleat trousers with zip front,L,72.42,https://i.imgur.com/lNDocpp.png
+1039,1960,accessories,glasses,"yellow, pink","metal, glass",excellent,solid,"1026, 1036",circle frame spectacles with graduated lenses,OS,86.36,https://i.imgur.com/KynYDbJ.png
+1040,1960,accessories,headband,yellow,"vinyl, metal",good,soild,,wide headband in patent leather,OS,56.49,https://i.imgur.com/8JxxNLH.png
+1041,1980,accessories,headband,neon green,"metal, polyester ",excellent,solid,1042,thin headband with large multi-loop lace bow,OS,43.30,https://i.imgur.com/2pm35Ku.png
+1042,1980,accessories,legwarmers,neon green,cotton poly blend,excellent,solid,1041,cotton knit  leg warmers,OS,43.37,https://i.imgur.com/9bxOEmp.png

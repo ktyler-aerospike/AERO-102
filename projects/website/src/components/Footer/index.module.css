@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    padding: 20px;
+    background: var(--orange-100);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: var(--gray-800);
+    font-weight: 500;
+    font-size: 12px;
+}

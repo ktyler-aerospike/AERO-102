@@ -1,0 +1,11 @@
+item_id,decade,category,subcategory,color,material,condition,pattern,related,description,size,price,url
+1043,1970,dress,kaftan,"black, orange, yellow, turquoise, teal",silk chiffon,good,floral,"1047, 1049","v-neck, bat wing sleeved, kaftan for maximum comfort and glamour",12,54.40,https://i.imgur.com/81ljkaR.png
+1044,1980,accessories,hat,black,"black nylon, sequins",fair,solid,,Michael Jackson style sequined black fedora,OS,42.34,https://i.imgur.com/SWeQclV.png
+1045,1990,top,bustier,"olive green, black",cotton poly blend,excellent,camoflauge,1046,camoflauge and lace bustier with lace straps and a lace up front,6,53.32,https://i.imgur.com/k5HQBMB.png
+1046,1990,skirt,mini skirt,"denim, light brown, dark brown","cotton denim, suede, leather",fair,solid,1045,low rise denim mini skirt with suede side insets laced up with leather ,6,63.63,https://i.imgur.com/nyUjYHv.png
+1047,1970,accessories,jewelry set,orange ,"melamin, metal",excellent,solid,"1043, 1049",set of orange melamine statement jewelry. Perfect for mod 60s looks or 70s glam,OS,37.48,https://i.imgur.com/vMTMIjt.png
+1048,1980,accessories,earrings,gold ,metal,fair,solid,,"bamboo style gold ""hoops"" ",OS,71.34,https://i.imgur.com/rARUEmY.png
+1049,1970,accessories,sunglasses,gold,"plastic, metal",excellent,solid,"1047, 1043",Elton John style 70s glam sunglasses,OS,64.75,https://i.imgur.com/v2PqNGX.png
+1050,1980,accessories,necklace,gold,metal,good,solid,"1054, 1055, 1053",Hip Hop gold chain,OS,89.58,https://i.imgur.com/ZSi2ayB.png
+1051,1980,tops,sweatshirt,"gray, red",cotton,good,solid,,Flashdance style off the shoulder sweatshirt with lip print graphic,M,54.77,https://i.imgur.com/PT8EyCA.png
+1052,1990,accessories,bag,"neon green, neon pink, neon blue ",rip-stop nylon,fair,color block,,Neon fanny pack,OS,81.60,https://i.imgur.com/TqfuHYT.png

@@ -1,0 +1,11 @@
+item_id,decade,category,subcategory,color,material,condition,pattern,related,description,size,price,url
+1023,1950,dress,sun dress,"tangerine, white",rayon,good,polka dot,1065,"puff sleeve, sweethear neckline, circle skirt",6,17.86,https://i.imgur.com/3OLRkJ7.png
+1024,1940,accessories,hat,royal blue,wool,excellent,solid,1019,grosgrain ribbon accent with bow,OS,29.41,https://i.imgur.com/0LdusmV.png
+1025,1950,top,sweater,baby pink,cashmere,good,solid,1022,pink cardigan with pearl buttons,M,34.74,https://i.imgur.com/HUqfn5T.png
+1026,1960,footwear,boots,orange,patent leather,excellent,solid,"1036, 1039","Knee-length, stack heel, round toe, Go-Go boots",8,67.84,https://i.imgur.com/3gaAmbV.png
+1027,1980,accessories,earrings,"neon pink, neon yellow, neon green","plastic, metal",good,striped,,"dangle, cassette tape style",OS,50.42,https://i.imgur.com/RqKWx2E.png
+1028,1980,accessories,earrings,"neon pink, neon yellow, neon green","plastic, metal",good,color block,,"post, lightening bolt",OS,18.40,https://i.imgur.com/Yq1KU68.png
+1029,1980,top,shirt,purple,cotton/poly blend,good,solid,"1041, 1042","mesh, off the shoulder with fitted tank underneath",M,18.57,https://i.imgur.com/iERPbCH.png
+1030,1990,pants,jeans,light denim,cotton spandex denim,good,solid,"1031, 1032","low rise, boot cut, thigh fading, comes with wide double-grommeted black belt",10,59.60,https://i.imgur.com/yLKmNzb.png
+1031,1990,top,baby tee,"red, yellow, green, black, blue",cotton spandex jersey,good,graphic,"1030, 1032","Ed Hardy style graphic tiger t-shirt with ""Pure Love Eternal"" in script",XL,28.34,https://i.imgur.com/chDkIqb.png
+1032,1990,accessories,hat,"black, beige, caramel, white","poly foam, nylon mesh",fair,leopard print,"1031, 1030",Von Dutch trucker hat with black mesh back,OS,84.66,https://i.imgur.com/uBvPxiE.png

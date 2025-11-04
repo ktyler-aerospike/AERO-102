@@ -1,0 +1,27 @@
+.product-list {
+    flex: 1;
+    min-height: 300px;
+    padding: 20px;
+}
+.page,
+.section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+.empty {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    color: var(--gray-400);
+}
+.section {
+    background: color-mix(in srgb, currentColor 1%, transparent);
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+}
+.empty {
+    justify-content: center;
+}

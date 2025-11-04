@@ -1,0 +1,458 @@
+{
+    "decade": {
+        "1990": {
+            "name": "1990s",
+            "image": "/decades/1990.png",
+            "description": ""
+        },
+        "1980": {
+            "name": "1980s",
+            "image": "/decades/1980.png",
+            "description": ""
+        },
+        "1970": {
+            "name": "1970s",
+            "image": "/decades/1970.png",
+            "description": ""
+        },
+        "1960": {
+            "name": "1960s",
+            "image": "/decades/1960.png",
+            "description": ""
+        },
+        "1950": {
+            "name": "1950s",
+            "image": "/decades/1950.png",
+            "description": ""
+        },
+        "1940": {
+            "name": "1940s",
+            "image": "/decades/1940.png",
+            "description": ""
+        }
+    },
+    "categories": {
+        "accessories": {
+            "name": "Accessories",
+            "image": "/categories/accessories.png",
+            "description": ""
+        },
+        "dresses": {
+            "name": "Dresses",
+            "image": "/categories/dresses.png",
+            "description": ""
+        },
+        "footwear": {
+            "name": "Footwear",
+            "image": "/categories/footwear.png",
+            "description": ""
+        },
+        "jackets": {
+            "name": "Jackets",
+            "image": "/categories/jackets.png",
+            "description": ""
+        },
+        "outerwear": {
+            "name": "Outerwear",
+            "image": "/categories/outerwear.png",
+            "description": ""
+        },
+        "pants": {
+            "name": "Pants",
+            "image": "/categories/pants.png",
+            "description": ""
+        },
+        "skirts": {
+            "name": "Skirts",
+            "image": "/categories/skirts.png",
+            "description": ""
+        },
+        "tops": {
+            "name": "Tops",
+            "image": "/categories/tops.png",
+            "description": ""
+        }
+    },
+    "subcategories": {
+        "belt": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cape": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "3 button vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "box pleat": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "circle": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "denim": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cowl neck": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "windbreaker": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "necklace": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "stirrup": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "puffer vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "trench coat": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "A-line": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "trapeze": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "mumu": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cargo": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "capri": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "pencil": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "scarf": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "formal": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "short sleeve": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "mini": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "tweed coat": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "henley": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "sweater vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "shoes": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "oxford": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cardigan": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "crochet vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "shift": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "polo style": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "t-shirt": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "fleece vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "pullover": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "palazzo": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "hat": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "denim jacket": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "jacket": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "ruffle neck": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "empire waist": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "sundress": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "harem": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "wrap": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "flare leg, low rise": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "pleated": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cycling": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "bermuda": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "bolero vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "poncho": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "v-neck": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "sarong": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "bomber jacket": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "5-pocket jeans": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "boat neck": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "pegged": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "crew neck": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "pea coat": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "jodhpurs": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "boot-cut": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "fitted vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "turtleneck": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "fedora": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "blazer": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "ruffle neck blouse": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cloche hat": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "minidress": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "newsboy cap": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "jogger": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "denim vest": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "cut-off": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "carpenter": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "low-rise": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "joggers": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "chinos": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "bodycon": {
+            "name": "",
+            "image": "",
+            "description": ""
+        },
+        "halter": {
+            "name": "",
+            "image": "",
+            "description": ""
+        }
+    }
+}
