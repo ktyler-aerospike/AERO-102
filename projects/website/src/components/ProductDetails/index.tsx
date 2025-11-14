@@ -2,6 +2,7 @@ import styles from "./index.module.css";
 import type { Product } from "../../pages/Product";
 
 const ProductDetails = ({     
+    item_id,
     category,
     subcategory,
     decade,
@@ -10,31 +11,34 @@ const ProductDetails = ({
     color,
     material,
     condition,
-    price
+    price,
+    description
 }: Omit<Product, 'images'>) => (
     <div className={styles['product-details']}>
         <div className={styles['product']}>
             <div className={styles['details']}>
-                <span className={styles['label']}>Category</span>
+                <span className={styles['label']}>Category:</span>
                 <span className="capitalize">{category}</span>
-                <span className={styles['label']}>Subcategory</span>
+                <span className={styles['label']}>Subcategory:</span>
                 <span className="capitalize">{subcategory}</span>
-                <span className={styles['label']}>Decade</span>
+                <span className={styles['label']}>Decade:</span>
                 <span>{decade}</span>
             </div>
             <div className={styles['details']}>
-                <span className={styles['label']}>Price</span>
+                <span className={styles['label']}>Price:</span>
                 <span>{price}</span>
-                <span className={styles['label']}>Material</span>
-                <span>{material}</span>
-                <span className={styles['label']}>Color(s)</span>
-                <span>{typeof color === 'string' ? color : color.join(", ")}</span>
-                <span className={styles['label']}>Pattern</span>
-                <span>{pattern}</span>
-                <span className={styles['label']}>Condition</span>
-                <span>{condition}</span>
-                <span className={styles['label']}>Size</span>
-                <span>{size}</span>
+                <span className={styles['label']}>Material(s):</span>
+                <span className="capitalize">{typeof material === 'string' ? material : material.join(", ")}</span>
+                <span className={styles['label']}>Color(s):</span>
+                <span className="capitalize">{typeof color === 'string' ? color : color.join(", ")}</span>
+                <span className={styles['label']}>Pattern:</span>
+                <span className="capitalize">{pattern}</span>
+                <span className={styles['label']}>Condition:</span>
+                <span className="capitalize">{condition}</span>
+                <span className={styles['label']}>Size:</span>
+                <span className="capitalize">{size}</span>
+                <span className={styles['label']}>Description:</span>
+                <span className="capitalize">{size}</span>
             </div>
         </div>
     </div>
