@@ -39,7 +39,7 @@ export const loader = async (product: string) => {
         statusText: "Not Found"
     });
 
-    let related: ProductList[] =[]
+    let related: Product[] =[]
     if (Array.isArray(data.related) && data.related.length > 0) {
         const ids = data.related.join(","); // e.g. "1025,1033"
         const relRes = await fetch(`/api/products/related/${ids}`);
@@ -54,7 +54,7 @@ export const loader = async (product: string) => {
 
 interface LoaderProps {
     product: Product
-    related: ProductList[]
+    related: Product[]
 }
 
 const Product = () => {
