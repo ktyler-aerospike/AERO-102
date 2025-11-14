@@ -1,5 +1,6 @@
 import styles from "./index.module.css";
-import { useLoaderData } from "react-router";
+import { useLoaderData } from "react-router-dom"; // usually from react-router-dom
+import type { LoaderFunctionArgs } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
@@ -9,87 +10,119 @@ import clsx from "clsx";
 import ProductList from "../../components/ProductList";
 
 export interface Product {
-    item_id: number
-    category: string
-    subcategory: string
-    decade: string
-    pattern: string
-    color: string | string[]
-    size: string
-    material: string | string[]
-    condition: string
-    price: number
-    description: string
-    related: number | number[]
+    item_id: number;
+    category: string;
+    subcategory: string;
+    decade: string;
+    pattern: string;
+    color: string | string[];
+    size: string;
+    material: string | string[];
+    condition: string;
+    price: number;
+    description: string;
+    related: number | number[];
     images: {
-        main: string
-        front?: string
-        back?: string
-        left?: string
-        right?: string
-    }
+        main: string;
+        front?: string;
+        back?: string;
+        left?: string;
+        right?: string;
+    };
 }
 
-export const loader = async (product: string) => {
-    let response = await fetch(`/api/products/${product}`);
-    let { error, data } = await response.json();
-
-    if(error) throw new Response("", {
-        status: 404,
-        statusText: "Not Found"
-    });
-
-    let related: Product[] =[]
-    if (Array.isArray(data.related) && data.related.length > 0) {
-        const ids = data.related.join(","); // e.g. "1025,1033"
-        const relRes = await fetch(`/api/products/related/${ids}`);
-        const { error: relError, data: relatedData } = await relRes.json();
-
-        if (!relError && Array.isArray(relatedData)) {
-            related = relatedData;
-        }
-    }
-        return { product: data, related};
-}
-
+// What the loader returns
 interface LoaderProps {
-    product: Product
-    related: Product[]
+    product: Product;
+    related: Product[];
 }
+
+export const loader = async ({ params }: LoaderFunctionArgs) => {
+    const productId = params.product; // or params.productId depending on your route
+
+    if (!productId) {
+        throw new Response("", {
+            status: 404,
+            statusText: "Not Found",
+        });
+    }
+
+    const response = await fetch(`/api/products/${productId}`);
+
+    if (!response.ok) {
+        throw new Response("", {
+            status: response.status,
+            statusText: response.statusText || "Not Found",
+        });
+    }
+
+    // adjust this to whatever your API actually returns
+    const { error, data, related } = await response.json();
+
+    if (error || !data) {
+        throw new Response("", {
+            status: 404,
+            statusText: "Not Found",
+        });
+    }
+
+    const relatedProducts: Product[] = Array.isArray(related) ? related : [];
+
+    const loaderData: LoaderProps = {
+        product: data,
+        related: relatedProducts,
+    };
+
+    return loaderData;
+};
 
 const Product = () => {
-    const { product: {images, ...product}, related }: LoaderProps = useLoaderData();
+    const { product, related } = useLoaderData() as LoaderProps;
+    const { images, ...rest } = product;
+
     return (
         <>
-        <section className={clsx("container", styles['product-container'])}>
-            <Breadcrumbs 
-                items={[
-                    product.category,
-                    product.subcategory,
-                    product.decade,
-                ]} />
-            <div className={styles['product']}>
-                <ProductImages images={images} />
-                <div className={styles['product-details']}>
-                    <ProductDetails {...product} />
-                    <div className={styles['purchase']}>
-                        <h3>{product.price}</h3>
-                        <p>Free shipping!</p>
-                        <p><Icon name="check"/>In stock</p>
-                        <div className={styles['controls']}>
-                            <Button icon="cart-add" className={styles['btn']}>Add to cart</Button>
-                            <Button icon="cart" variant="secondary" className={styles['btn']}>Buy now</Button>
+            <section className={clsx("container", styles["product-container"])}>
+                <Breadcrumbs
+                    items={[
+                        rest.category,
+                        rest.subcategory,
+                        rest.decade,
+                    ]}
+                />
+                <div className={styles["product"]}>
+                    <ProductImages images={images} />
+                    <div className={styles["product-details"]}>
+                        <ProductDetails {...rest} />
+                        <div className={styles["purchase"]}>
+                            <h3>{product.price}</h3>
+                            <p>Free shipping!</p>
+                            <p>
+                                <Icon name="check" />
+                                In stock
+                            </p>
+                            <div className={styles["controls"]}>
+                                <Button icon="cart-add" className={styles["btn"]}>
+                                    Add to cart
+                                </Button>
+                                <Button
+                                    icon="cart"
+                                    variant="secondary"
+                                    className={styles["btn"]}
+                                >
+                                    Buy now
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section className='container'>
-            <h2>Related items</h2>
-            <ProductList products={related} type="section" />
-        </section>
+            </section>
+            <section className="container">
+                <h2>Related items</h2>
+                <ProductList products={related} type="section" />
+            </section>
         </>
-    )
-}
+    );
+};
 
 export default Product;
