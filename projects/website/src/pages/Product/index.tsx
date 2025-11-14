@@ -1,6 +1,5 @@
 import styles from "./index.module.css";
-import { useLoaderData } from "react-router-dom"; // usually from react-router-dom
-import type { LoaderFunctionArgs } from "react-router-dom";
+import { useLoaderData } from "react-router";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
