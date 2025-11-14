@@ -34,8 +34,8 @@ bins = {
        "material": item_material,
        "pattern": item_pattern,
        "price": item_price,
-       "images": {"main": item_main_image}
-        "related": [item_related]
+       "images": {"main": item_main_image},
+        "related": [item_related],
         "description": item_description
        }
 
