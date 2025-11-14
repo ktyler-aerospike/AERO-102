@@ -23,6 +23,8 @@ const ProductDetails = ({
                 <span className="capitalize">{subcategory}</span>
                 <span className={styles['label']}>Decade:</span>
                 <span>{decade}</span>
+                <span className={styles['label']}>Item ID:</span>
+                <span>{item_id}</span>
             </div>
             <div className={styles['details']}>
                 <span className={styles['label']}>Price:</span>
@@ -38,7 +40,7 @@ const ProductDetails = ({
                 <span className={styles['label']}>Size:</span>
                 <span className="capitalize">{size}</span>
                 <span className={styles['label']}>Description:</span>
-                <span className="capitalize">{size}</span>
+                <span className="capitalize">{description}</span>
             </div>
         </div>
     </div>
