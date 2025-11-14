@@ -20,7 +20,8 @@ item_material = 'wool broadcloth'
 item_pattern = 'wavy geometric'
 item_price = 122.34
 item_main_image = 'https://i.imgur.com/'+ 'ReMo53s' + '.png'
-
+item_description = 'Late 60s/early 70s shift dress in the London mod style'
+item_related = 
 
 bins = {
        "item_id": item_id,   
@@ -34,6 +35,8 @@ bins = {
        "pattern": item_pattern,
        "price": item_price,
        "images": {"main": item_main_image}
+        "related": [item_related]
+        "description": item_description
        }
 
 
