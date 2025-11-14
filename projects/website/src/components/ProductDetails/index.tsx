@@ -28,7 +28,7 @@ const ProductDetails = ({
             </div>
             <div className={styles['details']}>
                 <span className={styles['label']}>Price:</span>
-                <span>{price}</span>
+                <span className="dollar">{price}</span>
                 <span className={styles['label']}>Material(s):</span>
                 <span className="capitalize">{typeof material === 'string' ? material : material.join(", ")}</span>
                 <span className={styles['label']}>Color(s):</span>
