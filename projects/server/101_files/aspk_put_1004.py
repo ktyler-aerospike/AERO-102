@@ -20,7 +20,7 @@ item_material = 'sheepskin'
 item_pattern = 'rustic'
 item_price = 304.12
 item_main_image = 'https://i.imgur.com/'+ 'Pvg2GU7' + '.png'
-item_description = 'Shearling coat with southwest pattern. Shawl collar with suede outside and sheeps wool inside."
+item_description = 'Shearling coat with southwest pattern. Shawl collar with suede outside and sheeps wool inside.'
 item_related = 1001
 
 
