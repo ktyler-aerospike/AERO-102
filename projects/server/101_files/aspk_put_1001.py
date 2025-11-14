@@ -21,7 +21,7 @@ item_pattern = 'solid'
 item_price = 41.14
 item_main_image = 'https://i.imgur.com/'+ 'BVrKTDn' + '.png'
 item_description = 'High-waisted pants snap front and five pocket styling.'
-item_related = 1002
+item_related = '1002, 1004'
 
 
 bins = {
