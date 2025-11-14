@@ -20,6 +20,8 @@ item_material = 'sheepskin'
 item_pattern = 'rustic'
 item_price = 304.12
 item_main_image = 'https://i.imgur.com/'+ 'Pvg2GU7' + '.png'
+item_description = 'Shearling coat with southwest pattern. Shawl collar with suede outside and sheeps wool inside."
+item_related = 1001
 
 
 bins = {
@@ -34,6 +36,8 @@ bins = {
        "pattern": item_pattern,
        "price": item_price,
        "images": {"main": item_main_image}
+       "related": [item_related]
+       "description": item_description
        }
 
 
