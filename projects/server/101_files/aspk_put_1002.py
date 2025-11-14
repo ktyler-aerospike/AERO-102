@@ -20,6 +20,8 @@ item_material = 'polyester'
 item_pattern = 'floral'
 item_price = 30.45
 item_main_image = 'https://i.imgur.com/'+ '87JJ61A' + '.png'
+item_description = "long-sleeved, button-front, wide lapel men's dress shirt"
+item_related = 1001
 
 
 bins = {
@@ -34,6 +36,8 @@ bins = {
        "pattern": item_pattern,
        "price": item_price,
        "images": {"main": item_main_image}
+       "related": [item_related]
+       "description": item_description
        }
 
 
