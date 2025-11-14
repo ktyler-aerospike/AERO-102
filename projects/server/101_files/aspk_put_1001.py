@@ -20,6 +20,8 @@ item_material = 'corduroy'
 item_pattern = 'solid'
 item_price = 41.14
 item_main_image = 'https://i.imgur.com/'+ 'BVrKTDn' + '.png'
+item_description = 'High-waisted pants snap front and five pocket styling.'
+item_related = 1002
 
 
 bins = {
@@ -34,6 +36,8 @@ bins = {
        "pattern": item_pattern,
        "price": item_price,
        "images": {"main": item_main_image}
+       "related": [item_related]
+       "description": item_description
        }
 
 
