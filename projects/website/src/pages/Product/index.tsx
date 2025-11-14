@@ -16,9 +16,11 @@ export interface Product {
     pattern: string
     color: string | string[]
     size: string
-    material: string
+    material: string | string[]
     condition: string
     price: number
+    description: string
+    related: number | number[]
     images: {
         main: string
         front?: string
@@ -36,7 +38,18 @@ export const loader = async (product: string) => {
         status: 404,
         statusText: "Not Found"
     });
-    return { product: data, related: [] };
+
+    let related: Products[] =[]
+    if (Array.isArray(data.related) && data.related.length > 0) {
+        const ids = data.related.join(","); // e.g. "1025,1033"
+        const relRes = await fetch(`/api/products/related/${ids}`);
+        const { error: relError, data: relatedData } = await relRes.json();
+
+        if (!relError && Array.isArray(relatedData)) {
+            related = relatedData;
+        }
+    }
+        return { product: data, related};
 }
 
 interface LoaderProps {
