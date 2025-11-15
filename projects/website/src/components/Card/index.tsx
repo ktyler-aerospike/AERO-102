@@ -20,7 +20,7 @@ const Card = ({ product }: Props) => {
                 <span>{product.subcategory}</span>
             </div>
             <div className={styles['image-container']}>
-                <img src={product.images.main} className={styles['image']} />
+                <img src={product.images.main} alt={`${product.category} - ${product.subcategory} from the ${product.decade}s`} className={styles['image']} />
             </div>
         </Link>
     )

@@ -17,7 +17,7 @@ const ProductImages = ({ images }: Props) => {
                 selected={selected}
                 setSelected={setSelected} />
             <div className={styles['selected-img']}>
-                <img src={images[selected]} className={styles['selected']} />
+                <img src={images[selected]} alt={`Product image - ${selected} view`} className={styles['selected']} />
             </div>
         </div>
     )
