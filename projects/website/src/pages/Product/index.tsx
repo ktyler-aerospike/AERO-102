@@ -31,16 +31,39 @@ export interface Product {
 }
 
 export const loader = async (product: string) => {
-    let response = await fetch(`/api/products/${product}`);
-    let { error, data } = await response.json();
+  const response = await fetch(`/api/products/${product}`);
+  const { error, data } = await response.json();
 
-    if(error) throw new Response("", {
-        status: 404,
-        statusText: "Not Found"
+  if (error) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Not Found",
     });
+  }
 
-        return { product: data, related};
-}
+  // --- Normalize the "related" field ---
+  let relatedIds: number[] = [];
+  if (Array.isArray(data.related)) {
+    relatedIds = data.related;
+  } else if (typeof data.related === "number") {
+    relatedIds = [data.related];
+  }
+
+  // --- Fetch related product data ---
+  const related = await Promise.all(
+    relatedIds.map(id =>
+      fetch(`/api/products/${id}`)
+        .then(r => r.json())
+        .then(res => res.data)
+    )
+  );
+
+  return {
+    product: data,
+    related
+  };
+};
+
 
 interface LoaderProps {
     product: Product
