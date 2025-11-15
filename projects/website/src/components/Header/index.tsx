@@ -8,7 +8,7 @@ const Header = () => {
         <header className={styles['header']}>
             <nav className={styles['nav']}>
                 <Link to="/" className={styles['logo']}>
-                    <img src={logo} className={styles['logo-img']} />
+                    <img src={logo} alt="VestVault logo" className={styles['logo-img']} />
                 </Link>
                 <Link to="/category">Categories</Link>
                 <Link to="/decade">Decades</Link>
