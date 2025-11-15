@@ -51,7 +51,7 @@ export const loader = async (product: string) => {
 
   // --- Fetch related product data ---
   const related = await Promise.all(
-    relatedIds.map(string(id) =>
+    relatedIds.map((id:int) =>
       fetch(`/api/products/${id}`)
         .then(r => r.json())
         .then(res => res.data)
