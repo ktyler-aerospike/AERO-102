@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./index.module.css";
 import { useLoaderData } from "react-router";
 import Breadcrumbs from "../../components/Breadcrumbs";
@@ -80,6 +81,11 @@ interface LoaderProps {
 
 const Product = () => {
     const { product: {images, ...product}, related }: LoaderProps = useLoaderData();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
+
     return (
         <>
         <section className={clsx("container", styles['product-container'])}>
