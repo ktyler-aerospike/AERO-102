@@ -16,9 +16,11 @@ export interface Product {
     pattern: string
     color: string | string[]
     size: string
-    material: string
+    material: string | string[]
     condition: string
     price: number
+    description: string
+    related: number | number[]
     images: {
         main: string
         front?: string
@@ -29,15 +31,47 @@ export interface Product {
 }
 
 export const loader = async (product: string) => {
-    let response = await fetch(`/api/products/${product}`);
-    let { error, data } = await response.json();
+  const response = await fetch(`/api/products/${product}`);
+  const { error, data } = await response.json();
 
-    if(error) throw new Response("", {
-        status: 404,
-        statusText: "Not Found"
+  if (error) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Not Found",
     });
-    return { product: data, related: [] };
-}
+  }
+
+  // --- Normalize the "related" field ---
+  let relatedIds: number[] = [];
+  if (Array.isArray(data.related)) {
+    relatedIds = data.related;
+  } else if (typeof data.related === "number") {
+    relatedIds = [data.related];
+  }
+
+  // --- Fetch related products ---
+  let related: Product[] = [];
+
+  if (relatedIds.length === 0) {
+    related = [];
+  } else if (relatedIds.length === 1) {
+    // only one — use the existing single-product route
+    const r = await fetch(`/api/products/${relatedIds[0]}`);
+    const rJson = await r.json();
+    related = [rJson.data];
+  } else {
+    // multiple — use the batch route
+    const ids = relatedIds.join(",");  // <-- "1002,1004,1011"
+    const batchResponse = await fetch(`/api/products/batch/${ids}`);
+    const batchJson = await batchResponse.json();
+    related = batchJson.data;
+  }
+
+  return {
+    product: data,
+    related
+  };
+};
 
 interface LoaderProps {
     product: Product

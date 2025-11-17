@@ -11,14 +11,18 @@ manage sindex create string idx_dcd ns vest_vault set inventory bin decade
 
 INSERT INTO vest_vault.inventory (PK, item_id, decade, category
 	, size, color, subcategory, condition, material, pattern
-	, price, images) 
+	, price, images, related, description) 
 VALUES (1010, 1010, "1990", "jacket", 8,   LIST('["pink", "purple","teal"]')
 	, "sweatsuit jacket", "good",  "rip-stop nylon", "color block", 65.23
-	, MAP('{"main":"https://i.imgur.com/3s01XIz.png"}'));
+	, MAP('{"main":"https://i.imgur.com/3s01XIz.png"}'), 1011
+    , 'peak 90s sweatsuit jacket. perfect for rollerblading and cross training.'
+);
 
 INSERT INTO vest_vault.inventory (PK,  item_id, decade, category
 	, size, color, subcategory, condition, material, pattern, price
-	, images) 
+	, images, related, description) 
 VALUES (1011, 1011, "1990", "pants", 8,  LIST('["pink", "purple","teal"]')
 	, "sweatpants", "good",  "rip-stop nylon", "color block", 55.37
-	, MAP('{"main":"https://i.imgur.com/znmZ0hi.png"}'));
+	, MAP('{"main":"https://i.imgur.com/znmZ0hi.png"}'), 1010
+    , 'peak 90s sweatsuit pants. perfect for rollerblading and cross training.'
+);
