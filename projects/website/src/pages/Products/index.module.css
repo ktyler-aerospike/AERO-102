@@ -1,5 +1,6 @@
 .products {
     display: flex;
+    max-width: 750px;
     flex-direction: column;
     flex: 1;
 }
