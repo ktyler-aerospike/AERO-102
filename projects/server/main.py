@@ -45,6 +45,11 @@ def get_products():
     data = as_service.query_all()
     return { 'error': None, 'data': data }
 
+@app.get("/related/{product_ids}")
+def get_many_products(product_ids: str):
+    data = as_service.get_many_products(product_ids)
+    return {"error": None, "data": data}
+
 @app.get("/products/{filter}/{value}")
 def get_filtered_products(filter, value):
     data = as_service.query_filtered_products(filter = filter, value = value)
@@ -55,6 +60,4 @@ def get_record(product: int):
     data = as_service.get_record(product)
     return { 'error': None, 'data': data}
 
-@app.get("/test")
-def test():
-    return('Welcome to uvicorn & fast api!')
+
