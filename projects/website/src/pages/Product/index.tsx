@@ -94,7 +94,7 @@ const Product = () => {
                 <div className={styles['product-details']}>
                     <ProductDetails {...product} />
                     <div className={styles['purchase']}>
-                        <h3>{product.price}</h3>
+                        <h3>$ {product.price}</h3>
                         <p>Free shipping!</p>
                         <p><Icon name="check"/>In stock</p>
                         <div className={styles['controls']}>
