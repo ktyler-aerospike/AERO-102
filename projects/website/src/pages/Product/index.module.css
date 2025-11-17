@@ -45,7 +45,4 @@
     width: 100%;
 }
 
-.dollar::before {
-    content: "$";
-    margin-right: 2px;
-}
+
