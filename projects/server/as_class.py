@@ -1,5 +1,6 @@
 import aerospike as aspk
 from aerospike import predicates as pred
+from typing import List
 
 # Aerospike service class to handle DB interactions
 class AerospikeService:
@@ -68,3 +69,15 @@ class AerospikeService:
         # loop through each record collecting the parts
         qry.foreach(collect_parts)
         return(parts)
+
+    def get_many_products(self, product_ids: str):
+        ids: List[int] = [
+                int(x.strip()) for x in product_ids.split(",") if x.strip()
+        ]
+        records = []
+        for pid in ids:
+            rec = self.get_record(pid)   # <-- uses your existing get_record()
+            if rec is not None:
+                records.append(rec)
+        return records
+        
