@@ -54,17 +54,17 @@ export const loader = async (product: string) => {
 
   if (relatedIds.length === 0) {
     related = [];
-  } else if (relatedIds.length === 1) {
-    // only one — use the existing single-product route
-    const r = await fetch(`/api/products/${relatedIds[0]}`);
-    const rJson = await r.json();
-    related = [rJson.data];
-  } else {
-    // multiple — use the batch route
-    const ids = relatedIds.join(",");  // <-- "1002,1004,1011"
-    const batchResponse = await fetch(`/api/related/${ids}`);
-    const batchJson = await batchResponse.json();
-    related = batchJson.data;
+      } else if (relatedIds.length === 1) {
+        // only one — use the existing single-product route
+        const r = await fetch(`/api/products/${relatedIds[0]}`);
+        const rJson = await r.json();
+        related = [rJson.data];
+      } else {
+        // multiple — use the batch route
+        const ids = relatedIds.join(",");  // <-- "1002,1004,1011"
+        const batchResponse = await fetch(`/api/related/${ids}`);
+        const batchJson = await batchResponse.json();
+        related = batchJson.data;
   }
 
   return {
