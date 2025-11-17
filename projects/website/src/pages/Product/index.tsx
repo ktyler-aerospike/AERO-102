@@ -62,7 +62,7 @@ export const loader = async (product: string) => {
   } else {
     // multiple — use the batch route
     const ids = relatedIds.join(",");  // <-- "1002,1004,1011"
-    const batchResponse = await fetch(`/api/products/batch/${ids}`);
+    const batchResponse = await fetch(`/api/related/${ids}`);
     const batchJson = await batchResponse.json();
     related = batchJson.data;
   }
