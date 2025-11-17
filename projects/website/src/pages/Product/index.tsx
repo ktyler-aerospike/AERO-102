@@ -49,21 +49,29 @@ export const loader = async (product: string) => {
     relatedIds = [data.related];
   }
 
-  // --- Fetch related product data ---
-  const related = await Promise.all(
-    relatedIds.map((id : number) =>
-      fetch(`/api/products/${id}`)
-        .then(r => r.json())
-        .then(res => res.data)
-    )
-  );
+  // --- Fetch related products ---
+  let related: Product[] = [];
+
+  if (relatedIds.length === 0) {
+    related = [];
+  } else if (relatedIds.length === 1) {
+    // only one — use the existing single-product route
+    const r = await fetch(`/api/products/${relatedIds[0]}`);
+    const rJson = await r.json();
+    related = [rJson.data];
+  } else {
+    // multiple — use the batch route
+    const ids = relatedIds.join(",");  // <-- "1002,1004,1011"
+    const batchResponse = await fetch(`/api/products/batch/${ids}`);
+    const batchJson = await batchResponse.json();
+    related = batchJson.data;
+  }
 
   return {
     product: data,
     related
   };
 };
-
 
 interface LoaderProps {
     product: Product
