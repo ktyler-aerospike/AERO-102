@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   aerospike:
-    image: aero-102-ntwk
+    image: aero-102
     container_name: aspk-102-node-1
     ports:
       - "3000:3000"   # Aerospike service
