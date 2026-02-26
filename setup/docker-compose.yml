@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  aerospike:
+    image: aero-102-ntwk
+    container_name: aspk-102-node-1
+    ports:
+      - "3000:3000"   # Aerospike database
+      - "3001:3001"
+      - "3002:3002"   
+      - "3003:3003"   # Aerospike info port
+      - "7080:7080"   # vest vault website front end access
+      - "7081:7081"   # VSCode access
+      - "8888:8888"   # Jupyter Notebooks
+    volumes:
+      - ./aerospike.conf:/etc/aerospike/aerospike.conf:ro
+      - ./data_mount:/opt/aerospike/data
+    networks:
+      - aspk-network
+    restart: unless-stopped
+
+networks:
+  aspk-network:
+    external: true
