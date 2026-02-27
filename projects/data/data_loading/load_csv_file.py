@@ -6,7 +6,7 @@ def create_aspk_connection():
   port=3000
   cfg={'hosts': [(host,port)]}
   # connect to aerospike
-  aspk_client=aspk.client(cfg).connect()
+  aspk_client=aerospike.client(cfg).connect()
   return aspk_client
 
 # create connection and policy
