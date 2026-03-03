@@ -15,6 +15,11 @@ ARG AEROSPIKE_VERSION=8.0.0.8
 ARG AEROSPIKE_TOOLS_VERSION=11.2.2
 ARG AEROSPIKE_ARCH
 
+# optional, but recommended so you can bump absctl independently
+ARG ABSCTL_VERSION=1.0.0-1
+# GitHub release tag is currently v1.0.0 for absctl v1.0.0-1 assets
+ARG ABSCTL_RELEASE_TAG=v1.0.0
+
 ENV HOME=/home/${ED_USER}
 ENV NVM_DIR=${HOME}/.nvm
 
@@ -46,6 +51,14 @@ RUN case "$TARGETPLATFORM" in \
     tar xzf aerospike-server.tgz --strip-components=1 -C /aerospike && \
     dpkg -i /aerospike/aerospike-server-*.deb && \
     dpkg -i /aerospike/aerospike-tools_*.deb && \
+    \
+	# ---- absctl ----
+	apt-get update && apt-get install -y --no-install-recommends rpm2cpio cpio && \
+	wget "https://github.com/aerospike/absctl/releases/download/${ABSCTL_RELEASE_TAG}/absctl-${ABSCTL_VERSION}.${AEROSPIKE_ARCH}.rpm" -O /tmp/absctl.rpm && \
+	mkdir -p /tmp/absctl-extract && cd /tmp/absctl-extract && \
+	rpm2cpio /tmp/absctl.rpm | cpio -idmv --no-absolute-filenames && \
+	install -m 0755 usr/bin/absctl /usr/local/bin/absctl && \
+    \
     usermod -a -G aerospike ${ED_USER} && \
     rm -rf aerospike-server.tgz /aerospike /var/lib/apt/lists/*
 
