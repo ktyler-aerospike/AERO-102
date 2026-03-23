@@ -1,4 +1,4 @@
-# Run these commands in AQL to re-create your Secondary Indexes
+# Run these commands in ASADM to re-create your Secondary Indexes
 
 manage sindex create string idx_cat ns vest_vault set inventory bin category
 
